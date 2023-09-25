@@ -1,0 +1,36 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+p {
+  text-align: justify;
+}
+
+
+p {
+  font-family: 'Merriweather', serif;
+}
+
+
+i {
+  font-family: 'Merriweather', serif;
+}
+
+
+.centralizado{
+  display: flex;
+  justify-content:center
+}
+
+
+.borda-arredondada{
+  border-radius: 10px;
+}
+
+h2{
+   color: darkolivegreen;
+}
+
+
+  

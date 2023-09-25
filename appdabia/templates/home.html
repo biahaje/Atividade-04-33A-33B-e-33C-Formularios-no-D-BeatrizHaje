@@ -1,0 +1,146 @@
+ {%load static%}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Beatriz Haje de Morisson Gonçalves</title>
+  <link href="{%static 'styles.css' %}" rel="stylesheet" type="text/css" />
+ 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Montserrat:wght@100;500&family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+
+  
+<body>
+  
+  <h1><u>CINCO PROGRAMAS PARA FAZER NO RIO DE JANEIRO </u> </h1>
+
+  
+  <p> O Rio de Janeiro é sem dúvidas um destino rico em opções de passeios e atividades para todos os gostos. Diante da abundância de opções, é perfeitamente compreensível que visitantes frequentemente se vejam diante do dilema de decidir qual atividade realizar. Aqui encontram-se cinco sugestões de programas para se fazer na Cidade Maravilhosa.
+  </p>
+  
+<div class="centralizado">
+  <div> <img class= "borda-arredondada" src="https://imgmd.net/images/v1/guia/1698673/rio-de-janeiro-4-c.jpg" width="800">
+  </div>
+ </div> 
+
+  
+  <ol>
+
+    {% for programa in programas %}
+     <h2><b><li>{{ programa.title }}
+     <a href='/programa/update/{{ programa.id }}'>Atualizar</a>
+      <a href='/programa/delete/{{ programa.id }}'>Remover</a>
+     </li></b></h2> 
+    <p>{{ programa.desc }} 
+    {% endfor %}
+  </ol>
+  <a href='/programa'>Adicionar novo título:</a>
+  
+        <!--h2><b><li>NASCER DO SOL DE STAND UP</li></b></h2-->
+      <!--Para aqueles que amam o nascer do sol, uma oportunidade verdadeiramente única é vivenciar esse espetáculo enquanto em um passeio de stand up paddle nas águas da praia de Copacabana. É uma maneira especial de começar o dia, em contato com a natureza e curtindo a beleza do amanhecer. Se você busca algo diferente e memorável, esse passeio de stand up paddle em Copacabana é uma ótima opção.-->
+ 
+
+    
+    <!--h2><b><li>MUSEU DO AMANHÃ</li></b></h2-->
+<!--p> O Museu do Amanhã, localizado no coração do Rio de Janeiro, é uma atração que cativa tanto moradores quanto visitantes de todo o mundo. Com um design arquitetônico futurista, o museu mergulha os visitantes em experiências interativas e instigantes, abordando temas como sustentabilidade, tecnologia, ciência e cultura de maneira inovadora. Através de exposições imersivas e interativas, o Museu do Amanhã convida a repensar o nosso papel no planeta e a considerar como nossas ações hoje impactarão o amanhã.
+</p>
+
+    
+    <!--h2><b><li>ILHAS TIJUCAS</li></b></h2>
+    
+<p> As Ilhas Tijucas, localizadas a uma curta distância da orla da Barra da Tijuca, são um convite irrecusável para os amantes da aventura e da natureza. O passeio pode ser feito tanto de barco quanto de stand up. Além de sua inigualável paisagem, as Ilhas oferecem oportunidades para os mais aventureiros, como pular de pedras e realizar um mergulho de snorkel.
+</p>
+
+    
+    <!--h2><b><li>SAIR PARA COMER</li></b></h2>
+    
+<p> O Rio conta com uma ampla diversidade gastronômica que abrange todos os tipos de gostos. Na Cidade Maravilhosa você encontra desde barraquinhas de rua que servem petiscos incríveis até restaurantes chiques com influências do mundo inteiro. Com tantas ótimas opções, é mais que normal ter dúvida sobre onde ir. Aqui estão algumas sugestões de restaurantes excelentes para você conhecer:
+</p>
+
+    <!--h2><b><li>TRILHAS</li></b></h2>
+    
+<p> O Rio de Janeiro é um paraíso para os amantes da natureza e das trilhas ao ar livre. A cidade oferece uma ampla variedade de trilhas para todos os níveis de habilidade, desde as trilhas mais curtas e acessíveis até desafios mais intensos, há opções para todos os gostos. Além de proporcionar um ótimo exercício físico, as trilhas cariocas também proporcionam uma experiência única de conexão com a natureza e vistas extraordinárias. Para você que ainda não sabe qual trilha fazer aqui estão algumas opções:
+  </p-->
+  
+  
+    
+  <ul>
+    <!--i>
+    <li>Trilha da Pedra da Gávea
+    </li>
+    <li>Trilha do Morro dos Dois Irmãos
+    </li>
+    <li>Trilha da Pedra Bonita
+    </li>
+    <li>Trilha do Morro da Urca
+    </li>
+    <li>Trilha da Cachoeira do Horto
+    </li>
+  </i-->
+    <i>
+      {% for trilha in trilhas %}
+      <li>{{ trilha.title }}
+      <a href='/trilha/update/{{ trilha.id }}'>Atualizar</a>
+      <a href='/trilha/delete/{{ trilha.id }}'>Remover</a>
+      </li>
+      {% endfor %}
+    </i>
+</ul>
+<a href='/trilha'>Adicionar novo título:</a>
+  
+<div class="centralizado">   
+  <table class="fundo-tabela" border="1">
+    <thead>
+      <tr>
+        <th>Restaurante</th>
+        <th>Instagram</th>
+      </tr>
+    </thead>
+      <tbody>
+        {% for tabela in tabelas %}
+        <tr>
+          <td>{{ tabela.title }}</td>
+          <td>{{ tabela.insta }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+</div>
+      <!--tr>
+        <td>Nola</td>
+        <td><a
+      href="https://www.instagram.com/nolarestaurante/" target="_blank">@nolarestaurante</a></td>    
+      </tr>
+      
+      <tr>
+        <td>Braz</td>
+        <td><a
+      href="https://www.instagram.com/brazpizzaria/" target="_blank">@brazpizzaria</a></td>
+      </tr>
+      
+      <tr>
+        <td>Asa Rio</td>
+        <td><a
+      href="https://www.instagram.com/asariorestaurante/" target="_blank">@asariorestaurante</a></td>
+      </tr>
+      
+      <tr>
+        <td>Cozi Bistro</td>
+        <td><a
+      href="https://www.instagram.com/asariorestaurante/" target="_blank">@cozi.bistrobar</a></td>
+      </tr>
+      
+      <tr>
+        <td>Zo Sushi</td>
+        <td><a
+      href="https://www.instagram.com/zosushi/" target="_blank">@zosushi</a></td>
+      </tr>
+</thead-->
+
+  
+</body> 
+</html>

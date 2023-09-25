@@ -1,0 +1,26 @@
+<h1>{{ type }} Trilhas</h1>
+
+<form method='post'>
+  {% csrf_token %}
+  <div>
+    <label>Trilhas:</label>
+    <input name='title', value='{{ trilha.title }}'>
+  </div>
+
+  <div>
+    <label>Zona:</label>
+    <input name='zona', value='{{ trilha.zona}}'>
+  </div>
+
+  <div>
+    <label>Nível:</label>
+    <input name='nivel', value='{{ trilha.nivel }}'>
+  </div>
+  
+  <div>
+    <label>Mais_Famosa:</label>
+    <input type= 'number' name='mais_famosa', value='{{ trilha.mais_famosa }}'>
+  </div>
+
+  <input type='submit' value='Registrar'>
+</form>

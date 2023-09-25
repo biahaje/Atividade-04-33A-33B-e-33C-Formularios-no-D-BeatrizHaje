@@ -1,0 +1,31 @@
+<h1>{{ type }} Programas</h1>
+
+<form method='post'>
+  {% csrf_token %}
+  <div>
+    <label>Programas:</label>
+    <input name='title', value='{{ programa.title }}'>
+  </div>
+
+  <div>
+    <label>Duração:</label>
+    <input name='duraçao', value='{{ programa.duraçao}}'>
+  </div>
+
+  <div>
+    <label>Gênero:</label>
+    <input name='genero', value='{{ programa.genero }}'>
+  </div>
+  
+  <div>
+    <label>Preço:</label>
+    <input name='preço', value='{{ programa.preço }}'>
+  </div>
+
+  <div>
+    <label>Descrição:</label>
+    <input name='desc', value='{{ programa.desc }}'>
+  </div>
+
+  <input type='submit' value='Registrar'>
+</form>
