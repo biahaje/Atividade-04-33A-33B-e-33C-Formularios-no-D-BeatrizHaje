@@ -30,3 +30,4 @@ urlpatterns = [
     path('trilha/delete/<id>', views.delete_trilhas),
 ]
 
+
